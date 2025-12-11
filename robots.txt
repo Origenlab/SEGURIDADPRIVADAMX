@@ -1,0 +1,22 @@
+# robots.txt para SeguridadPrivadaMX
+# https://seguridadprivadamx.com
+
+User-agent: *
+Allow: /
+
+# Bloquear archivos de sistema
+Disallow: /cgi-bin/
+Disallow: /*.php$
+
+# Permitir todos los bots de busqueda principales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+# Sitemap
+Sitemap: https://seguridadprivadamx.com/sitemap.xml

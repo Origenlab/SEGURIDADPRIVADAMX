@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="theme-color" content="#1a1a2e">
+    <meta name="description" content="Dashboard y reportes de seguridad para condominios en CDMX. Estadísticas en tiempo real de incidentes, visitas, turnos y métricas de seguridad.">
+    <meta name="keywords" content="reportes seguridad condominios, dashboard seguridad, estadísticas incidentes, métricas seguridad CDMX, analytics vigilancia, seguridad privada para condominios">
+    <meta name="author" content="SeguridadPrivadaMX">
+    <meta name="robots" content="index, follow">
+    <title>Reportes y Analytics de Seguridad | SeguridadPrivadaMX</title>
+    <link rel="canonical" href="https://seguridadprivadamx.com/reportes-analytics.html">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Reportes y Analytics de Seguridad | Dashboard en Tiempo Real">
+    <meta property="og:description" content="Dashboard completo con estadísticas de incidentes, visitas, turnos y métricas de seguridad en tiempo real para condominios en CDMX.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://seguridadprivadamx.com/reportes-analytics.html">
+    <meta property="og:image" content="https://seguridadprivadamx.com/images/reportes-analytics-og.jpg">
+    <meta property="og:locale" content="es_MX">
+    <meta property="og:site_name" content="SeguridadPrivadaMX">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Reportes y Analytics de Seguridad">
+    <meta name="twitter:description" content="Dashboard con estadísticas en tiempo real de incidentes, visitas y métricas de seguridad para condominios CDMX.">
+    <meta name="twitter:image" content="https://seguridadprivadamx.com/images/reportes-analytics-og.jpg">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <!-- Preconnect to external origins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Preload Critical Resources - Parallel loading -->
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="preload" href="https://fonts.gstatic.com/s/inter/v14/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- CSS - Load immediately -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts - Non-blocking -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+    <!-- Schema.org Service -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Reportes y Analytics de Seguridad",
+      "description": "Dashboard completo para administradores con estadísticas de incidentes, visitas, turnos y métricas de seguridad en tiempo real para condominios en Ciudad de México.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "SeguridadPrivadaMX",
+        "url": "https://seguridadprivadamx.com",
+        "telephone": "+52-55-1234-5678"
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": "Ciudad de México"
+      },
+      "serviceType": "Reportes de Seguridad"
+    }
+    </script>
+
+    <!-- Schema.org BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Inicio",
+          "item": "https://seguridadprivadamx.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Servicios",
+          "item": "https://seguridadprivadamx.com/servicios.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Reportes y Analytics",
+          "item": "https://seguridadprivadamx.com/reportes-analytics.html"
+        }
+      ]
+    }
+    </script>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-wrapper">
+                    <a href="index.html" class="logo">
+                        <span class="logo-text">SeguridadPrivadaMX</span>
+                    </a>
+
+                    <button class="mobile-menu-toggle" aria-label="Abrir menú">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+
+                    <ul class="nav-menu">
+                        <li><a href="index.html" class="nav-link">Inicio</a></li>
+                        <li class="nav-item-dropdown">
+                            <a href="servicios.html" class="nav-link active">Servicios</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="vigilancia-24-7.html">Vigilancia 24/7</a></li>
+                                <li><a href="control-accesos.html">Control de Accesos</a></li>
+                                <li><a href="camaras-monitoreo.html">Cámaras y Monitoreo</a></li>
+                                <li><a href="respuesta-emergencias.html">Respuesta a Emergencias</a></li>
+                                <li><a href="patrullaje-vehicular.html">Patrullaje Vehicular</a></li>
+                                <li><a href="reportes-analytics.html">Reportes y Analytics</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                        <li><a href="blog.html" class="nav-link">Blog</a></li>
+                        <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                        <li><a href="tel:+525512345678" class="nav-phone">55 1234 5678</a></li>
+                        <li><a href="index.html#cotizacion" class="btn-primary-nav">Cotizar Gratis</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb-wrapper">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Inicio</a> / <a href="servicios.html">Servicios</a> / <span>Reportes y Analytics</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Reportes y Analytics de Seguridad
+                    </h1>
+                    <p class="hero-subtitle">
+                        Dashboard completo para administradores con <strong>estadísticas en tiempo real</strong> de incidentes, visitas, turnos y métricas de seguridad. Tome <strong>decisiones informadas</strong> basadas en datos para optimizar la protección de su condominio.
+                    </p>
+                </div>
+
+                <div class="hero-description">
+                    <div class="description-card">
+                        <h2 class="description-title">Inteligencia de Seguridad en sus Manos</h2>
+                        <p class="description-text">
+                            Nuestro sistema de reportes y analytics centraliza toda la información de seguridad de su condominio. Acceda a <strong>reportes mensuales detallados</strong>, estadísticas de visitas y accesos desde el <a href="control-accesos.html">sistema de control de accesos</a>, historial completo de incidencias y evaluación de desempeño del personal de <a href="vigilancia-24-7.html">vigilancia 24/7</a>.
+                        </p>
+                        <p class="description-text">
+                            La plataforma incluye <strong>gráficos interactivos</strong>, exportación a PDF/Excel y envío automático de informes. Integra datos de <a href="camaras-monitoreo.html">videovigilancia</a> y <a href="patrullaje-vehicular.html">patrullaje vehicular</a> para una visión completa de la seguridad de su comunidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Módulos del Dashboard</h2>
+                <p class="section-subtitle">
+                    Herramientas completas de análisis y reporteo para una gestión de seguridad inteligente
+                </p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);">
+                        <span class="service-image-text">Panel Principal</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Dashboard en Tiempo Real</h3>
+                        <p class="service-description">
+                            Vista ejecutiva con indicadores clave de seguridad actualizados al instante para una supervisión efectiva.
+                        </p>
+                        <ul class="service-features">
+                            <li>KPIs de seguridad en vivo</li>
+                            <li>Alertas prioritarias destacadas</li>
+                            <li>Resumen de actividad diaria</li>
+                            <li>Gráficos interactivos</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #059669 0%, #10b981 100%);">
+                        <span class="service-image-text">Reportes</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Reportes Automatizados</h3>
+                        <p class="service-description">
+                            Generación automática de informes periódicos con métricas detalladas de todas las operaciones de seguridad.
+                        </p>
+                        <ul class="service-features">
+                            <li>Reportes diarios, semanales, mensuales</li>
+                            <li>Exportación a PDF y Excel</li>
+                            <li>Envío automático por email</li>
+                            <li>Personalización de contenido</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #7c3aed 0%, #a78bfa 100%);">
+                        <span class="service-image-text">Incidencias</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Gestión de Incidencias</h3>
+                        <p class="service-description">
+                            Registro completo de todos los eventos de seguridad con clasificación, seguimiento y análisis de tendencias.
+                        </p>
+                        <ul class="service-features">
+                            <li>Registro con evidencia fotográfica</li>
+                            <li>Clasificación por tipo y gravedad</li>
+                            <li>Seguimiento hasta resolución</li>
+                            <li>Análisis de patrones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #dc2626 0%, #ef4444 100%);">
+                        <span class="service-image-text">Accesos</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Analytics de Accesos</h3>
+                        <p class="service-description">
+                            Estadísticas detalladas de entradas y salidas de visitantes, proveedores y residentes del condominio.
+                        </p>
+                        <ul class="service-features">
+                            <li>Conteo de visitas por periodo</li>
+                            <li>Horarios de mayor afluencia</li>
+                            <li>Visitantes frecuentes</li>
+                            <li>Tiempo promedio de estancia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 100%);">
+                        <span class="service-image-text">Personal</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Desempeño del Personal</h3>
+                        <p class="service-description">
+                            Evaluación objetiva del rendimiento de guardias con métricas de puntualidad, rondines y atención.
+                        </p>
+                        <ul class="service-features">
+                            <li>Control de asistencia y puntualidad</li>
+                            <li>Cumplimiento de rondines</li>
+                            <li>Calificación de servicio</li>
+                            <li>Historial de capacitaciones</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image" style="background: linear-gradient(135deg, #0891b2 0%, #06b6d4 100%);">
+                        <span class="service-image-text">Tendencias</span>
+                    </div>
+                    <div class="service-content">
+                        <h3 class="service-title">Análisis Predictivo</h3>
+                        <p class="service-description">
+                            Identificación de patrones y tendencias para anticipar riesgos y optimizar recursos de seguridad.
+                        </p>
+                        <ul class="service-features">
+                            <li>Detección de patrones inusuales</li>
+                            <li>Proyección de incidencias</li>
+                            <li>Recomendaciones automáticas</li>
+                            <li>Comparativa histórica</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="implementation-process">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Proceso de Implementación</h2>
+                <p class="section-subtitle">
+                    Configuramos su dashboard de analytics en 5 sencillos pasos
+                </p>
+            </div>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="process-number">01</span>
+                        <h3 class="process-title">Análisis de Necesidades</h3>
+                    </div>
+                    <div class="process-card-body">
+                        <p class="process-description">Identificamos los indicadores clave para su condominio.</p>
+                        <ul class="process-list">
+                            <li>Reunión con administración</li>
+                            <li>Definición de KPIs prioritarios</li>
+                            <li>Revisión de procesos actuales</li>
+                            <li>Identificación de pain points</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="process-number">02</span>
+                        <h3 class="process-title">Configuración del Sistema</h3>
+                    </div>
+                    <div class="process-card-body">
+                        <p class="process-description">Personalizamos el dashboard según sus requerimientos específicos.</p>
+                        <ul class="process-list">
+                            <li>Creación de usuarios y roles</li>
+                            <li>Configuración de módulos</li>
+                            <li>Integración con sistemas existentes</li>
+                            <li>Personalización de reportes</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="process-number">03</span>
+                        <h3 class="process-title">Migración de Datos</h3>
+                    </div>
+                    <div class="process-card-body">
+                        <p class="process-description">Importamos información histórica para análisis comparativo.</p>
+                        <ul class="process-list">
+                            <li>Recopilación de datos históricos</li>
+                            <li>Limpieza y normalización</li>
+                            <li>Carga inicial al sistema</li>
+                            <li>Validación de integridad</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="process-number">04</span>
+                        <h3 class="process-title">Capacitación</h3>
+                    </div>
+                    <div class="process-card-body">
+                        <p class="process-description">Entrenamos a su equipo para aprovechar todas las funcionalidades.</p>
+                        <ul class="process-list">
+                            <li>Sesión para administradores</li>
+                            <li>Capacitación a guardias</li>
+                            <li>Manual de usuario digital</li>
+                            <li>Videos tutoriales</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="process-card">
+                    <div class="process-card-header">
+                        <span class="process-number">05</span>
+                        <h3 class="process-title">Puesta en Marcha</h3>
+                    </div>
+                    <div class="process-card-body">
+                        <p class="process-description">Activamos el sistema con soporte continuo durante la transición.</p>
+                        <ul class="process-list">
+                            <li>Go-live supervisado</li>
+                            <li>Soporte técnico dedicado</li>
+                            <li>Ajustes y optimizaciones</li>
+                            <li>Revisión a 30 días</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Beneficios del Servicio -->
+    <section class="benefits-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Beneficios de Nuestro Sistema</h2>
+                <p class="section-subtitle">
+                    Ventajas que transforman la gestión de seguridad de su condominio
+                </p>
+            </div>
+
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 6v6l4 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Ahorro de Tiempo</h3>
+                    <p class="benefit-description">Reportes automáticos que eliminan horas de trabajo manual en la generación de informes.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                            <circle cx="12" cy="12" r="3"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Visibilidad Total</h3>
+                    <p class="benefit-description">Acceso en tiempo real a toda la información de seguridad desde cualquier dispositivo.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 11-5.93-9.14"/>
+                            <polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Decisiones Informadas</h3>
+                    <p class="benefit-description">Datos objetivos para tomar mejores decisiones sobre recursos y estrategias de seguridad.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Mayor Seguridad</h3>
+                    <p class="benefit-description">Identificación temprana de patrones de riesgo para acciones preventivas efectivas.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Acceso Multiplataforma</h3>
+                    <p class="benefit-description">Consulte el dashboard desde computadora, tablet o smartphone en cualquier momento.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="benefit-title">Transparencia</h3>
+                    <p class="benefit-description">Información clara y verificable para compartir con el comité de administración.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="services" style="background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Preguntas Frecuentes</h2>
+                <p class="section-subtitle">
+                    Resolvemos sus dudas sobre nuestro sistema de reportes y analytics
+                </p>
+            </div>
+
+            <div class="faq-container" style="max-width: 900px; margin: 0 auto;">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cómo accedo al dashboard de reportes?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El dashboard está disponible vía web y aplicación móvil. Le proporcionamos credenciales de acceso personalizadas con diferentes niveles de permisos según su rol (administrador general, miembro de comité, etc.).</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cada cuánto se actualizan los datos?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los datos se actualizan en tiempo real. Cada registro de acceso, incidencia o rondín se refleja inmediatamente en el dashboard. Los reportes consolidados se generan automáticamente según la frecuencia que configure.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Puedo personalizar los reportes?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, el sistema permite personalizar completamente los reportes: puede seleccionar qué métricas incluir, el periodo de tiempo, formato de salida (PDF, Excel), y programar envíos automáticos a las personas que designe.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué información incluyen los reportes mensuales?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los reportes mensuales incluyen: resumen de incidencias, estadísticas de accesos, cumplimiento de rondines, asistencia del personal, comparativa con meses anteriores, y recomendaciones de mejora basadas en el análisis de datos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Cuánto historial de datos se almacena?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Almacenamos un historial completo de 24 meses en línea para consulta inmediata. Los datos más antiguos se archivan y pueden recuperarse bajo solicitud. Esto permite análisis de tendencias y comparativas año contra año.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿El sistema está integrado con los otros servicios?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí, el dashboard se alimenta automáticamente de todos nuestros servicios: control de accesos, cámaras de monitoreo, rondines de patrullaje y bitácoras de guardias. Toda la información se centraliza en un solo lugar.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Qué tan segura es la información?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La información está protegida con encriptación de nivel bancario, servidores en la nube con respaldo redundante, y acceso controlado mediante autenticación de dos factores. Cumplimos con las normativas de protección de datos personales.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>¿Tiene costo adicional el sistema de reportes?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                        </svg>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El dashboard básico está incluido en todos nuestros planes de servicio integral. Ofrecemos módulos premium opcionales con funcionalidades avanzadas de analytics predictivo y reportes personalizados para condominios con necesidades especiales.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>¿Listo para tomar el control de su seguridad?</h2>
+                <p>Solicite una demostración gratuita de nuestro dashboard y descubra cómo los datos pueden transformar la seguridad de su condominio.</p>
+                <div class="cta-buttons">
+                    <a href="index.html#cotizacion" class="btn-primary-large">Solicitar Demo Gratis</a>
+                    <a href="servicios.html" class="btn-secondary-large">Ver Todos los Servicios</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-main">
+                <div class="footer-grid">
+                    <div class="footer-column footer-brand">
+                        <h3 class="footer-brand-title">SeguridadPrivadaMX</h3>
+                        <p class="footer-brand-text">
+                            Empresa líder en seguridad privada para condominios en CDMX. Tecnología propia, precios transparentes y guardias 100% certificados.
+                        </p>
+                        <div class="footer-contact-info">
+                            <p class="footer-contact-item">
+                                <span class="footer-contact-label">Teléfono:</span>
+                                <a href="tel:+525512345678">55 1234 5678</a>
+                            </p>
+                            <p class="footer-contact-item">
+                                <span class="footer-contact-label">Email:</span>
+                                <a href="mailto:contacto@seguridadprivadamx.com">contacto@seguridadprivadamx.com</a>
+                            </p>
+                            <p class="footer-contact-item">
+                                <span class="footer-contact-label">Horario:</span>
+                                <span>Lunes a Domingo 24/7</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Servicios</h4>
+                        <ul class="footer-links">
+                            <li><a href="vigilancia-24-7.html">Vigilancia 24/7</a></li>
+                            <li><a href="control-accesos.html">Control de Accesos</a></li>
+                            <li><a href="camaras-monitoreo.html">Cámaras y Monitoreo</a></li>
+                            <li><a href="respuesta-emergencias.html">Respuesta a Emergencias</a></li>
+                            <li><a href="patrullaje-vehicular.html">Patrullaje Vehicular</a></li>
+                            <li><a href="reportes-analytics.html">Reportes y Analytics</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Empresa</h4>
+                        <ul class="footer-links">
+                            <li><a href="nosotros.html">Quiénes Somos</a></li>
+                            <li><a href="index.html#clientes">Testimonios</a></li>
+                            <li><a href="index.html#cotizacion">Solicitar Cotización</a></li>
+                            <li><a href="preguntas-frecuentes.html">Preguntas Frecuentes</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="contacto.html">Contacto</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-column">
+                        <h4 class="footer-column-title">Cobertura CDMX</h4>
+                        <ul class="footer-links">
+                            <li><a href="contacto.html">Benito Juárez</a></li>
+                            <li><a href="contacto.html">Miguel Hidalgo</a></li>
+                            <li><a href="contacto.html">Coyoacán</a></li>
+                            <li><a href="contacto.html">Cuauhtémoc</a></li>
+                            <li><a href="contacto.html">Álvaro Obregón</a></li>
+                            <li><a href="contacto.html">Todas las Alcaldías</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-certifications">
+                <div class="certification-item">
+                    <span class="certification-label">Certificaciones y Registros:</span>
+                </div>
+                <div class="certification-item">
+                    <span>SSC-CDMX Vigente</span>
+                </div>
+                <div class="certification-item">
+                    <span>Registro DGSP</span>
+                </div>
+                <div class="certification-item">
+                    <span>REPSE Activo</span>
+                </div>
+                <div class="certification-item">
+                    <span>Seguro de Responsabilidad Civil</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="footer-bottom-content">
+                    <p class="footer-copyright">
+                        &copy; 2025 SeguridadPrivadaMX. Todos los derechos reservados.
+                    </p>
+                    <div class="footer-legal-links">
+                        <a href="aviso-privacidad.html">Aviso de Privacidad</a>
+                        <span class="separator">|</span>
+                        <a href="terminos-condiciones.html">Términos y Condiciones</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <a href="https://wa.me/5215512345678?text=Hola%2C%20me%20interesa%20el%20servicio%20de%20Reportes%20y%20Analytics" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 0C7.164 0 0 7.164 0 16c0 2.824.738 5.488 2.032 7.792L0 32l8.416-2.016A15.908 15.908 0 0016 32c8.836 0 16-7.164 16-16S24.836 0 16 0z" fill="#25D366"/>
+            <path d="M25.36 22.26c-.44 1.24-2.18 2.28-3.56 2.58-.96.2-2.2.36-6.4-1.38-5.36-2.22-8.82-7.66-9.08-8.02-.26-.36-2.12-2.82-2.12-5.38s1.34-3.82 1.82-4.34c.48-.52 1.04-.64 1.4-.64.36 0 .7.02 1.02.02.32 0 .76-.12 1.18.9.44 1.04 1.5 3.66 1.64 3.92.14.26.24.58.04.94-.18.36-.28.58-.56.9-.28.32-.58.7-.82.94-.26.26-.54.54-.24 1.06.3.52 1.34 2.2 2.88 3.56 1.96 1.76 3.62 2.3 4.14 2.56.52.26.82.22 1.12-.14.3-.36 1.3-1.5 1.64-2.02.34-.52.68-.44 1.14-.26.46.18 2.94 1.38 3.44 1.64.52.26.86.38 1 .6.14.22.14 1.26-.3 2.48z" fill="#fff"/>
+        </svg>
+    </a>
+
+    <script src="js/app.js" defer></script>
+</body>
+</html>
