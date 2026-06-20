@@ -1,0 +1,43 @@
+/**
+ * tokens.css — design system canónico de SeguridadPrivadaMX.
+ * Tema oscuro (seguridad). CSS vanilla + variables :root.
+ */
+:root {
+  /* Color — base oscura */
+  --bg: #070b15;
+  --bg-soft: #0d1424;
+  --surface: #121b30;
+  --text: #eef2f8;
+  --text-soft: #9aa7bd;
+  --text-invert: #070b15;
+  --border: #1e2a44;
+  --border-strong: #2c3c5e;
+
+  /* Acento (seguridad: azul + alerta) */
+  --accent: #2e6bff;
+  --accent-soft: rgba(46, 107, 255, 0.14);
+  --alert: #e23b4e;
+  --ok: #1fb673;
+
+  /* Tipografía */
+  --font-sans: system-ui, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  --font-display: 'Segoe UI', system-ui, sans-serif;
+  --fs-xs: 0.78rem;
+  --fs-sm: 0.9rem;
+  --fs-base: 1rem;
+  --fs-lg: 1.2rem;
+  --fs-xl: 1.55rem;
+  --fs-2xl: 2.1rem;
+  --fs-3xl: 3rem;
+  --leading: 1.65;
+
+  /* Layout */
+  --gutter: 1.25rem;
+  --container: 1140px;
+  --container-narrow: 760px;
+  --radius: 12px;
+  --header-h: 64px;
+
+  --shadow: 0 12px 40px rgba(0, 0, 0, 0.45);
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
