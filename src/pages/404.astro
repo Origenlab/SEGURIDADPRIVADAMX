@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_404.head.html?raw';
-import body from './_404.body.html?raw';
-import pageScript from './_404.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_404.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="P\u00e1gina no encontrada (404) | SeguridadPrivadaMX" description="La p\u00e1gina que buscas no existe o fue movida. Vuelve al inicio o explora nuestros servicios de seguridad privada para condominios." canonicalPath="/404.html">
+  <Fragment set:html={content} />
+</PageLayout>

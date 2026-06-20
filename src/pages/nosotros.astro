@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_nosotros.head.html?raw';
-import body from './_nosotros.body.html?raw';
-import pageScript from './_nosotros.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_nosotros.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Nosotros \u2014 Empresa de Seguridad Privada para Condominios en CDMX | SeguridadPrivadaMX" description="Conoce a SeguridadPrivadaMX: m\u00e1s de Protegemos condominios y residenciales en CDMX y Edomex. Empresa 100% mexicana, guardias certificados SSC, tecnolog\u00eda propia y precios transparentes." canonicalPath="/nosotros.html">
+  <Fragment set:html={content} />
+</PageLayout>

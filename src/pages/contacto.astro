@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_contacto.head.html?raw';
-import body from './_contacto.body.html?raw';
-import pageScript from './_contacto.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_contacto.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Contacto \u2014 Seguridad Privada para Condominios en CDMX | SeguridadPrivadaMX" description="Cont\u00e1ctanos para cotizar seguridad privada para tu condominio en CDMX y Edomex. Atenci\u00f3n 24/7 por tel\u00e9fono, WhatsApp y correo. Auditor\u00eda de seguridad y cotizaci\u00f3n gratis en 4 horas." canonicalPath="/contacto.html">
+  <Fragment set:html={content} />
+</PageLayout>

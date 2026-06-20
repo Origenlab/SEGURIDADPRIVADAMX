@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_control-accesos.head.html?raw';
-import body from './_control-accesos.body.html?raw';
-import pageScript from './_control-accesos.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_control-accesos.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Control de Accesos para Condominios en CDMX | SeguridadPrivadaMX" description="Sistemas de control de acceso peatonal y vehicular para condominios: registro digital de visitantes, biometr\u00eda, lectura de placas (LPR) y app m\u00f3vil. Integrado con CCTV y guardias. Cotizaci\u00f3n gratis." canonicalPath="/control-accesos.html">
+  <Fragment set:html={content} />
+</PageLayout>

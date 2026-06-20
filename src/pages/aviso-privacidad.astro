@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_aviso-privacidad.head.html?raw';
-import body from './_aviso-privacidad.body.html?raw';
-import pageScript from './_aviso-privacidad.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_aviso-privacidad.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Aviso de Privacidad | SeguridadPrivadaMX" description="Aviso de Privacidad de SeguridadPrivadaMX conforme a la LFPDPPP: datos que recabamos, finalidades, derechos ARCO y contacto." canonicalPath="/aviso-privacidad.html">
+  <Fragment set:html={content} />
+</PageLayout>

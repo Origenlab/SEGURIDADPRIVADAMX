@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_reportes-analytics.head.html?raw';
-import body from './_reportes-analytics.body.html?raw';
-import pageScript from './_reportes-analytics.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_reportes-analytics.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Reportes y Analytics de Seguridad para Condominios en CDMX | SeguridadPrivadaMX" description="Dashboard de seguridad para administradores de condominios: reportes en tiempo real, estad\u00edsticas de accesos e incidencias, desempe\u00f1o del personal y reportes listos para asamblea. Cotizaci\u00f3n gratis." canonicalPath="/reportes-analytics.html">
+  <Fragment set:html={content} />
+</PageLayout>

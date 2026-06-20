@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_servicios.head.html?raw';
-import body from './_servicios.body.html?raw';
-import pageScript from './_servicios.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_servicios.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Servicios de Seguridad Privada para Condominios en CDMX | SeguridadPrivadaMX" description="8 servicios de seguridad privada para condominios y residenciales en CDMX y Edomex: vigilancia 24/7, control de accesos, CCTV, respuesta a emergencias, patrullaje, reportes, consultor\u00eda y alarmas. Guardias certificados SSC y tecnolog\u00eda propia. Cotizaci\u00f3n gratis en 4 horas." canonicalPath="/servicios.html">
+  <Fragment set:html={content} />
+</PageLayout>

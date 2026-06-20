@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_blog.head.html?raw';
-import body from './_blog.body.html?raw';
-import pageScript from './_blog.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_blog.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Blog de Seguridad para Condominios \u2014 Gu\u00edas y Consejos | SeguridadPrivadaMX" description="Blog de seguridad privada para condominios en CDMX: gu\u00edas sobre costos, marco legal, CCTV, control de acceso, protocolos de emergencia y c\u00f3mo elegir empresa. Conocimiento que protege." canonicalPath="/blog.html">
+  <Fragment set:html={content} />
+</PageLayout>

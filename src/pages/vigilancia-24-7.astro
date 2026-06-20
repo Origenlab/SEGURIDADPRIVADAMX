@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_vigilancia-24-7.head.html?raw';
-import body from './_vigilancia-24-7.body.html?raw';
-import pageScript from './_vigilancia-24-7.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_vigilancia-24-7.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="Vigilancia 24/7 para Condominios en CDMX | SeguridadPrivadaMX" description="Guardias intramuros certificados SSC para tu condominio las 24 horas, los 365 d\u00edas. Personal verificado, rotaci\u00f3n inteligente, supervisi\u00f3n presencial y bit\u00e1cora digital. Cotizaci\u00f3n gratis en 4 horas." canonicalPath="/vigilancia-24-7.html">
+  <Fragment set:html={content} />
+</PageLayout>

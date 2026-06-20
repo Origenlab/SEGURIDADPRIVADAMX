@@ -1,0 +1,43 @@
+---
+import site from '@config/site';
+import { orgAndWebsite, jsonLd } from '@lib/seo';
+import header from '@components/chrome-header.html?raw';
+import footer from '@components/chrome-footer.html?raw';
+
+interface Props {
+  title: string;
+  description: string;
+  canonicalPath: string; // ej. "/servicios.html"
+  withOrgSchema?: boolean;
+}
+const { title, description, canonicalPath, withOrgSchema = false } = Astro.props;
+const url = `${site.url}${canonicalPath}`;
+---
+<!doctype html>
+<html lang={site.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={site.nombre} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="/css/home.css" />
+    {withOrgSchema && <Fragment set:html={jsonLd(orgAndWebsite())} />}
+  </head>
+  <body>
+    <Fragment set:html={header} />
+    <slot />
+    <Fragment set:html={footer} />
+    <script src="/js/main.js" defer is:inline></script>
+  </body>
+</html>

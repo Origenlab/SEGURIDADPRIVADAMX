@@ -1,7 +1,7 @@
 ---
-import BaseLayout from '@layouts/BaseLayout.astro';
-import head from './_camaras-monitoreo.head.html?raw';
-import body from './_camaras-monitoreo.body.html?raw';
-import pageScript from './_camaras-monitoreo.page.js?raw';
+import PageLayout from '@layouts/PageLayout.astro';
+import content from './_camaras-monitoreo.content.html?raw';
 ---
-<BaseLayout lang="es-MX" bodyClass="" headExtra={head} bodyHtml={body} pageScript={pageScript} />
+<PageLayout title="C\u00e1maras de Seguridad y Monitoreo para Condominios en CDMX | SeguridadPrivadaMX" description="Videovigilancia HD para condominios: c\u00e1maras 4K, grabaci\u00f3n en la nube, detecci\u00f3n con IA, monitoreo 24/7 y acceso remoto desde la app. Dise\u00f1o e instalaci\u00f3n profesional. Cotizaci\u00f3n gratis." canonicalPath="/camaras-monitoreo.html">
+  <Fragment set:html={content} />
+</PageLayout>
