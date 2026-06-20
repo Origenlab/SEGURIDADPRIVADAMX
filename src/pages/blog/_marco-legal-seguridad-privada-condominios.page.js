@@ -1,0 +1,1 @@
+(function(){var t=document.getElementById("toTop");function o(){var y=window.scrollY||window.pageYOffset;if(t)t.classList.toggle("show",y>600);}window.addEventListener("scroll",o,{passive:true});o();if(t)t.addEventListener("click",function(){window.scrollTo({top:0,behavior:"smooth"});});var yr=document.getElementById("year");if(yr)yr.textContent=new Date().getFullYear();})();
