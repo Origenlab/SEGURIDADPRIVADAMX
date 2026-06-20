@@ -1,0 +1,97 @@
+---
+import site from '@config/site';
+import { article, jsonLd } from '@lib/seo';
+import '@styles/tokens.css';
+
+interface Props {
+  title: string;
+  description: string;
+  slug: string;
+  category?: string;
+  author?: string;
+  publishDate?: Date;
+  readingMinutes?: number;
+}
+const { title, description, slug, category, author = site.nombre, publishDate, readingMinutes } = Astro.props;
+const url = `${site.url}/blog/${slug}.html`;
+const ld = jsonLd(article({ title, description, url, author, datePublished: publishDate?.toISOString() }));
+const fecha = publishDate
+  ? new Intl.DateTimeFormat('es-MX', { year: 'numeric', month: 'long', day: 'numeric' }).format(publishDate)
+  : '';
+---
+<!doctype html>
+<html lang={site.idioma}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — {site.nombre}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={url} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content={site.themeColor} />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={url} />
+    <meta property="og:site_name" content={site.nombre} />
+    <Fragment set:html={ld} />
+  </head>
+  <body>
+    <header class="sp-header">
+      <div class="sp-wrap sp-header-in">
+        <a class="sp-logo" href="/index.html">Seguridad<b>PrivadaMX</b></a>
+        <nav class="sp-nav">
+          {site.nav.map((n) => <a href={n.href}>{n.label}</a>)}
+        </nav>
+      </div>
+    </header>
+
+    <main class="sp-article">
+      <p class="sp-kicker"><a href="/blog.html">← Blog</a></p>
+      {category && <p class="sp-cat">{category}</p>}
+      <h1 class="sp-title">{title}</h1>
+      <p class="sp-dek">{description}</p>
+      <p class="sp-meta">{author}{fecha && ` · ${fecha}`}{readingMinutes && ` · ${readingMinutes} min`}</p>
+      <div class="sp-content"><slot /></div>
+    </main>
+
+    <footer class="sp-footer">
+      <div class="sp-wrap">
+        <p><strong>{site.nombre}</strong> · {site.tagline}.</p>
+        <p>{site.zonas.join(' · ')} · <a href={`mailto:${site.contacto.email}`}>{site.contacto.email}</a></p>
+        <p class="sp-legal"><a href="/aviso-privacidad.html">Aviso de Privacidad</a> · <a href="/terminos-condiciones.html">Términos</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
+<style>
+  body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--font-sans); }
+  .sp-wrap { max-width: var(--container); margin: 0 auto; padding: 0 var(--gutter); }
+  .sp-header { border-bottom: 1px solid var(--border); background: var(--bg-soft); position: sticky; top: 0; z-index: 10; }
+  .sp-header-in { display: flex; align-items: center; justify-content: space-between; height: var(--header-h); }
+  .sp-logo { color: var(--text); text-decoration: none; font-weight: 700; font-size: var(--fs-lg); }
+  .sp-logo b { color: var(--accent); }
+  .sp-nav { display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  .sp-nav a { color: var(--text-soft); text-decoration: none; font-size: var(--fs-sm); }
+  .sp-nav a:hover { color: var(--text); }
+  .sp-article { max-width: var(--container-narrow); margin: 0 auto; padding: 3rem var(--gutter) 4rem; }
+  .sp-kicker a { color: var(--accent); text-decoration: none; font-size: var(--fs-sm); }
+  .sp-cat { text-transform: uppercase; letter-spacing: 0.1em; font-size: var(--fs-xs); color: var(--accent); font-weight: 700; margin: 0.6rem 0 0; }
+  .sp-title { font-size: var(--fs-3xl); line-height: 1.1; margin: 0.4rem 0 0.6rem; }
+  .sp-dek { font-size: var(--fs-lg); color: var(--text-soft); }
+  .sp-meta { font-size: var(--fs-sm); color: var(--text-soft); border-bottom: 1px solid var(--border); padding-bottom: 1.5rem; margin-bottom: 2rem; }
+  .sp-content { font-size: var(--fs-lg); line-height: var(--leading); }
+  .sp-content :global(h2) { font-size: var(--fs-xl); margin: 2.2rem 0 0.6rem; }
+  .sp-content :global(h3) { font-size: var(--fs-lg); margin: 1.6rem 0 0.4rem; color: var(--text); }
+  .sp-content :global(p) { margin: 0 0 1.1rem; color: var(--text); }
+  .sp-content :global(ul), .sp-content :global(ol) { margin: 0 0 1.1rem 1.2rem; }
+  .sp-content :global(li) { margin: 0.3rem 0; }
+  .sp-content :global(a) { color: var(--accent); }
+  .sp-content :global(strong) { color: var(--text); }
+  .sp-content :global(table) { width: 100%; border-collapse: collapse; margin: 1.2rem 0; font-size: var(--fs-sm); }
+  .sp-content :global(th), .sp-content :global(td) { border: 1px solid var(--border); padding: 0.5rem 0.7rem; text-align: left; }
+  .sp-content :global(th) { background: var(--surface); }
+  .sp-footer { border-top: 1px solid var(--border); background: var(--bg-soft); padding: 2rem 0; color: var(--text-soft); font-size: var(--fs-sm); }
+  .sp-footer a { color: var(--accent); text-decoration: none; }
+  .sp-legal { margin-top: 0.5rem; }
+</style>

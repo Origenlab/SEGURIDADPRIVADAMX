@@ -9,8 +9,8 @@ const blog = defineCollection({
   loader: glob({ pattern: '**/*.md', base: './src/content/blog' }),
   schema: z
     .object({
-      title: z.string().max(75),
-      description: z.string().max(165),
+      title: z.string().max(95),
+      description: z.string().max(170),
       category: z
         .enum(['Guías', 'Costos', 'Legal', 'Tecnología', 'Operación'])
         .default('Guías'),
