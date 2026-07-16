@@ -5,3 +5,7 @@ node_modules
 dist
 .cache
 .astro/
+.DS_Store
+*.log
+.env
+.wrangler
